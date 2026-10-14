@@ -1,0 +1,5 @@
+# Old code folder:
+old/
+
+# Secrets and local configuration:
+.env
