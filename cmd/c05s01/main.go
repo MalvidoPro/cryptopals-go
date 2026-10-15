@@ -2,7 +2,7 @@ package main
 
 import (
 	"bytes"
-	"cryptopals/pkg/encoding"
+	"cryptopals/pkg/cipher"
 	"encoding/hex"
 	"log"
 	"os"
@@ -22,7 +22,7 @@ func main() {
 	text = bytes.ReplaceAll(text, []byte("\r\n"), []byte("\n"))
 
 	// 2. Encrypt the text and put it in the solution file (in its hexadecimal form).
-	ciphertextHexByte := []byte(hex.EncodeToString(encoding.RepeatingKey(KEY, text)))
+	ciphertextHexByte := []byte(hex.EncodeToString(cipher.RepeatingKey(KEY, text)))
 	os.WriteFile(SOL_FILE, ciphertextHexByte, 0644)
 
 }
