@@ -3,7 +3,6 @@ package main
 import (
 	"cryptopals/pkg/analysis"
 	"cryptopals/pkg/cipher"
-	"cryptopals/pkg/encoding"
 	"encoding/base64"
 	"encoding/csv"
 	"fmt"
@@ -115,8 +114,8 @@ func main() {
 	}
 	fmt.Printf("First key is: %v\n", possibleKeys[0])
 
-	os.WriteFile("results/llave_1.txt", encoding.RepeatingKey(string(possibleKeys[0]), corpus), 0644)
-	os.WriteFile("results/llave_2.txt", encoding.RepeatingKey(string(possibleKeys[1]), corpus), 0644)
-	os.WriteFile("results/llave_3.txt", encoding.RepeatingKey(string(possibleKeys[2]), corpus), 0644)
+	os.WriteFile("results/llave_1.txt", cipher.RepeatingKey(string(possibleKeys[0]), corpus), 0644)
+	os.WriteFile("results/llave_2.txt", cipher.RepeatingKey(string(possibleKeys[1]), corpus), 0644)
+	os.WriteFile("results/llave_3.txt", cipher.RepeatingKey(string(possibleKeys[2]), corpus), 0644)
 
 }
