@@ -27,7 +27,7 @@ func init() {
 
 	// Navigate up two directory levels: from 'internal/config/config.go' to the repository root
 	configDir := filepath.Dir(currentFile) // .../cryptopals-go/config
-	ProjectRoot := filepath.Dir(configDir) // .../cryptopals-go
+	ProjectRoot = filepath.Dir(configDir) // .../cryptopals-go
 
 	DataDir = filepath.Join(ProjectRoot, "testdata")
 	ResultsDir = filepath.Join(ProjectRoot, "results")
