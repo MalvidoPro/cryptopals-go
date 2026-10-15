@@ -27,7 +27,7 @@ The repository strictly separates reusable cryptographic components from specifi
 ## Getting Started
 
 ### Prerequisites
-*   Go 1.2x+
+*   Go 1.25.0
 *   Linux / WSL environment recommended
 
 ### Running the Test Suites
